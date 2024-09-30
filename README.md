@@ -61,6 +61,6 @@
 
 ###
 
-<img src="https://raw.githubusercontent.com/Yogesh18102002/Yogesh18102002/output/snake.svg" alt="Snake animation" />
+<img src="https://raw.githubusercontent.com/Yogesh18102002/Yogesh18102002/output/snake.yml" alt="Snake animation" />
 
 ###
