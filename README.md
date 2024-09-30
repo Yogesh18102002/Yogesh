@@ -57,17 +57,9 @@
 
 ###
 
-<img align="right" height="180" src="https://i.imgflip.com/65efzo.gif"  />
+<img align="right" height="150" src="https://i.imgflip.com/65efzo.gif"  />
 
 ###
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Yogesh18102002&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="140" alt="languages graph"  />
-</div>
-
-###
-
-<br clear="both">
 
 <img src="https://raw.githubusercontent.com/Yogesh18102002/Yogesh18102002/output/snake.svg" alt="Snake animation" />
 
