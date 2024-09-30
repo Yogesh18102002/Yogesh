@@ -2,26 +2,30 @@ name: Generate Snake Animation
 on:
   schedule:
     - cron: "0 0 * * *" # Runs every day at midnight
-  workflow_dispatch: # Allows you to manually trigger the action
+  workflow_dispatch: # Allows manual trigger of the workflow
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Check out the repository
-      - uses: actions/checkout@v2
+      # Step 1: Check out the repository (updated to v3)
+      - uses: actions/checkout@v3
 
-      # Step 2: Generate Snake SVG file
+      # Step 2: Create dist directory (this will create it if it doesn't exist)
+      - name: Create dist directory
+        run: mkdir -p dist
+
+      # Step 3: Generate Snake SVG file
       - name: Generate Snake
         uses: Platane/snk@master
         with:
           github_user_name: Yogesh18102002 # Replace with your GitHub username
           svg_out_path: dist/snake.svg
 
-      # Step 3: Push the Snake SVG file back to the repository
+      # Step 4: Push the Snake SVG file back to the repository (updated action)
       - name: Push Snake
-        uses: ad-m/github-push-action@v0.6.0
+        uses: github-actions-x/commit@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main # Ensure this is the correct branch of your repository
+          branch: main
           force: true
           directory: dist
