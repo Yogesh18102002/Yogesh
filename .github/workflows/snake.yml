@@ -21,11 +21,10 @@ jobs:
           github_user_name: Yogesh18102002 # Replace with your GitHub username
           svg_out_path: dist/snake.svg
 
-      # Step 4: Push the Snake SVG file back to the repository (updated action)
-      - name: Push Snake
-        uses: github-actions-x/commit@v4
+      # Step 4: Commit and push the generated Snake SVG file back to the repository
+      - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "Generated Snake animation [skip ci]"
+          file_pattern: dist/snake.svg
           branch: main
-          force: true
-          directory: dist
